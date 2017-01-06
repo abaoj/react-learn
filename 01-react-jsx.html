@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>react-JSX</title>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+      var myStyle = {
+	  fontSize: 100,
+	  color: '#FF0000'
+      };
+
+		var arr = [
+		  <h1>abaoj</h1>,
+		  <h2>学的不仅是技术，更是梦想！</h2>,
+		];
+
+      ReactDOM.render(
+      	<div>
+      	<h1>abaoj</h1>
+      	<h2>欢迎学习 React</h2>
+		<h3>{1+1}</h3>   {/*表达式*/}
+		<h4>{0 == 1 ? 'True!' : 'False'}</h4>  {/*表达式*/}
+		{/*注释...*/}
+        <h5 style = {myStyle}>样式</h5> {/*样式*/}
+        <div>{arr}</div> {/*数组*/}
+        <p data-myattribute = "somevalue">这是一个很不错的 JavaScript 库!</p>
+        </div>
+      	,
+      	document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+<!--
+React 使用 JSX 来替代常规的 JavaScript。
+它是类型安全的，在编译过程中就能发现错误。
+使用 JSX 编写模板更加简单快速。
+
+表达式
+表达式写在花括号 {} 中
+ReactDOM.render(
+	<div>
+	  <h1>{1+1}</h1>
+	</div>
+	,
+	document.getElementById('example')
+);
+
+
+在 JSX 中不能使用 if else 语句，但可以使用 conditional (三元运算) 表达式来替代
+ReactDOM.render(
+	<div>
+	  <h1>{i == 1 ? 'True!' : 'False'}</h1>
+	</div>
+	,
+	document.getElementById('example')
+);
+
+
+样式
+var myStyle = {
+	fontSize: 100,
+	color: '#FF0000'
+};
+ReactDOM.render(
+	<h1 style = {myStyle}>菜鸟教程</h1>,
+	document.getElementById('example')
+);
+
+
+注释
+注释需要写在花括号中 {/*？*/}
+
+
+数组
+var arr = [
+  <h1>菜鸟教程</h1>,
+  <h2>学的不仅是技术，更是梦想！</h2>,
+];
+ReactDOM.render(
+  <div>{arr}</div>,
+  document.getElementById('example')
+);
+
+-->
+

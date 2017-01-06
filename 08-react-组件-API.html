@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>react-JSX</title>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var Counter = React.createClass({
+             getInitialState:function(){
+             return{clickCount:0};
+             },
+             handleClick:function(){
+               this.setState(function(state){
+               return{clickCount:state.clickCount+1};
+               });
+             },
+             render:function(){
+                return (
+                       <h2 onClick={this.handleClick}>点我！点击次数：{this.state.clickCount}</h2>
+                )
+             }
+
+        });
+        ReactDOM.render(
+             <Counter/>,
+             document.getElementById('example')
+        );
+
+    </script>
+  </body>
+</html>
+
+<!--
+设置状态：setState
+替换状态：replaceState
+设置属性setProps
+替换属性replaceProps
+强制更新：forceUpdate
+获取DOM节点：findDOMNode
+判断组件挂载状态：isMounted
+
+设置状态:setState
+setState(object nextState[, function callback])
+参数说明
+nextState，将要设置的新状态，该状态会和当前的state合并
+callback，可选参数，回调函数。该函数会在setState设置成功，且组件重新渲染后调用。
+合并nextState和当前state，并重新渲染组件。setState是React事件处理函数中和请求回调函数中触发UI更新的主要方法。
+-->

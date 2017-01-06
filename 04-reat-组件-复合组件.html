@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>react-组件-复合组件</title>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="https://static.runoob.com/assets/react/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+         var WebSite = React.createClass({
+         render:function(){
+              return(
+                 <div>
+                    <Name name={this.props.name} />
+                    <Link site={this.props.site}/>  
+                 </div>
+              );
+         }
+         });
+
+         var Name = React.createClass({
+         render:function(){
+               return(
+               <h1>{this.props.name}</h1>
+               );
+         }
+
+         });
+
+         var Link =React.createClass({
+             render:function(){
+                 return(
+                 <a href="{this.props.site}">{this.props.site}</a>
+                 )
+             }
+
+         });
+
+
+         React.render(
+             <WebSite  name="abaoj" site=" https://github.com/abaoj"/ >,
+             document.getElementById('example')
+         );
+
+    </script>
+  </body>
+</html>
+
+<!--
+复合组件
+可以通过创建多个组件来合成一个组件，即把组件的不同功能点进行分离
+
+var WebSite = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Name name={this.props.name} />
+        <Link site={this.props.site} />
+      </div>
+    );
+  }
+});
+
+var Name = React.createClass({
+  render: function() {
+    return (
+      <h1>{this.props.name}</h1>
+    );
+  }
+});
+
+var Link = React.createClass({
+  render: function() {
+    return (
+      <a href={this.props.site}>
+        {this.props.site}
+      </a>
+    );
+  }
+});
+
+React.render(
+  <WebSite name="菜鸟教程" site=" http://www.runoob.com" />,
+  document.getElementById('example')
+);
+-->
+
