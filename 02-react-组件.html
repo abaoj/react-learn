@@ -32,23 +32,3 @@ React.createClass 方法用于生成一个组件类 HelloMessage。
 
 -->
 
-
-
-
-<!--
-传递参数
-如果我们需要向组件传递参数，可以使用 this.props 对象,实例如下
-
-var HelloMessage = React.createClass({
-  render: function() {
-    return <h1>Hello {this.props.name}</h1>;
-  }
-});
-
-ReactDOM.render(
-  <HelloMessage name="Runoob" />,
-  document.getElementById('example')
-);
-
-在添加属性时， class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。
--->
