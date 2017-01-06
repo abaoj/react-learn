@@ -1,6 +1,6 @@
 
 <h1>react开发环境搭建</h1>
-目前了解到react开发方式有两种：
+目前了解到react开发方式有两种：<br/>
 1）通过 npm 使用 React,操作基本手册如下:<br/>
 <a href="https://github.com/abaoj/react-learn/blob/master/node%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%8F%8Awebpack%E6%89%93%E5%8C%85.docx">node搭建环境及webpack打包</a><br/>
 2）直接引入React 和 React DOM 文件进行开发<br/>这边讲的例子都是属于直接引入开发<br/>
