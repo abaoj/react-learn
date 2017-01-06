@@ -28,5 +28,5 @@ React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）<b
 
 
 <h1>参考网站</h1>
-《react官网》http://reactjs.cn/react/docs/getting-started-zh-CN.html
-《菜鸟官网》http://www.runoob.com/react/react-tutorial.html
+《react官网》http://reactjs.cn/react/docs/getting-started-zh-CN.html<br/>
+《菜鸟官网》http://www.runoob.com/react/react-tutorial.html  有些东西太旧
